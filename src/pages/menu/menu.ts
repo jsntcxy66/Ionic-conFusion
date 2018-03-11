@@ -37,7 +37,7 @@ export class MenuPage implements OnInit {
     console.log('ionViewDidLoad MenuPage');
   }
 
-  dishSelected(event, dish) {
+  dishSelected(event, dish) {  //for here, the event is click
     //pushing to ourselves
     this.navCtrl.push(DishdetailPage, {
       dish: dish
