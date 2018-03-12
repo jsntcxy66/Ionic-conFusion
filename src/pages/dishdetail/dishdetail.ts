@@ -70,9 +70,10 @@ export class DishdetailPage {
             let modal= this.commentModal.create(CommentPage);
             modal.present();
             modal.onDidDismiss(comment => {
-              this.dish.comments.push(comment);
+              if (comment != null)
+                this.dish.comments.push(comment);
               console.log(comment);
-            })
+            });
           }
         },
         {
